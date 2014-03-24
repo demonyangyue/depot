@@ -5,6 +5,7 @@
 <h1>Your Pragmatic Catalog</h1>
 
 <!-- START_HIGHLIGHT -->
+<p>You have visited the store <%= pluralize(@counter, 'time') %> </p>
 <% cache ['store', Product.latest] do %>
 <!-- END_HIGHLIGHT -->
   <% @products.each do |product| %>
@@ -19,6 +20,7 @@
     <!-- START:currency -->
           <span class="price"><%= number_to_currency(product.price) %></span>
     <!-- END:currency -->
+          <%= button_to 'Add to Cart', line_items_path(product_id: product.id), remote: true  %>
         </div>
       </div>
 <!-- START_HIGHLIGHT -->

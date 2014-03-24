@@ -17,7 +17,7 @@ class ProductsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:products)
     assert_select 'tr', 4
     assert_select 'td', 12
-    assert_present(@product.title,"Product title should present")
+    assert @product.title.present?,"Product title should present"
   end
 
   test "should get new" do
