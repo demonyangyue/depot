@@ -1,7 +1,7 @@
 source 'http://ruby.taobao.org/'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '~>4.0.2.rc1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -45,3 +45,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use Active Admin
+gem 'activeadmin', github: 'gregbell/active_admin'
+
+# Use pundit for authority management
+gem 'pundit'
