@@ -50,3 +50,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Use pundit for authority management
 gem 'pundit'
+
+group :production do
+  gem 'mysql2'
+end
